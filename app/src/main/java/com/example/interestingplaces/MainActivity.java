@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     private SearchView searchView;
     private ListView listView;
     private ArrayAdapter<String> adapter;
-    private static final String[] dummy = {"apple", "banana", "orange", "grape", "strawberry"};
+    private static final String[] dummy = {"The Colosseum", "The Louvre Museum", "Vatican Museums", "Statue of Liberty", "Eiffel Tower", "Basilica de la Sagrada Familia", "French Quarter"};
     private TextView noResultsFoundTextView;
 
     @Override
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             listView.setVisibility(View.GONE);
             noResultsFoundTextView.setVisibility(View.GONE);
         } else {
+
             listView.setVisibility(View.VISIBLE);
             adapter.getFilter().filter(newText);
             listView.setAdapter(adapter);
